@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles"> <!--no ponemos acá una ruta porque de eso se encargará el servidor-->
+    <title>Black & White SpA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles"> <!--no ponemos acá una ruta porque de eso se encargará el servidor. el slash es importante para que considere la ruta raiz del servidor-->
 </head>
 <body>
-    <p> aplicacion mostrada en el puerto 3000 desde el servidor</p>
+    <div class="container">
+<h1>Black and White Spa</h1>
+<form action="/procesarImagen">
+    <div class="form-group col-4">
+        <label for="url">Url de la imagen</label>
+        <input type="text" name="url" id="inputUrlImagen" class="form-control my-2">
+        <button class="btn btn-light">Subir y procesar imagen</button>
+    </div>
+</form>
+<div class="p-0" id="imagenProcesada">
+
+</div>
+
+</div>
+
 </body>
 </html>

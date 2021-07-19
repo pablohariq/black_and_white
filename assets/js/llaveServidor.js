@@ -15,7 +15,9 @@ const claveAdmin = 123
 const iniciarServidor = (argv) => {
     console.log(argv.key)
     if (argv.key === claveAdmin){ //clave de admin
-        child_process.exec(`node assets/js/server.js`)
+        child_process.exec(`node assets/js/server.js`, (err, stdout) => {
+            (err)? console.log(err) : console.log(stdout)
+        })
     }
     else{
         console.error('Acceso denegado')
