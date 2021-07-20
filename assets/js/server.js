@@ -32,6 +32,7 @@ http
             img.write('imagenProcesada.jpg', () => {
                 fs.readFile('imagenProcesada.jpg', (err, imagen) => {
                     res.write(imagen)
+                    res.end()
                 })
             })
         })

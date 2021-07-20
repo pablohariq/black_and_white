@@ -13,7 +13,6 @@ const constructorIniciarServidor = {
 
 const claveAdmin = 123
 const iniciarServidor = (argv) => {
-    console.log(argv.key)
     if (argv.key === claveAdmin){ //clave de admin
         child_process.exec(`node assets/js/server.js`, (err, stdout) => {
             (err)? console.log(err) : console.log(stdout)
@@ -25,3 +24,5 @@ const iniciarServidor = (argv) => {
 }
 
 yargs.command('iniciar', descripcionIniciarServidor, constructorIniciarServidor, iniciarServidor).help().argv
+//para abrir el servidor en el puerto 3000 a través de este script, ejecutar en la terminal:
+//node assets/js/llaveServidor.js iniciar --key 123
